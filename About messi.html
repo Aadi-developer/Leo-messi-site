@@ -22,6 +22,35 @@
 </video><br><br>
 <p>Messi's prime year was 2012 in which he scored 91 goals in a calender year in that also he didn't played  4 weeks in that year , infact his dribbling count was also good and mostly he scored a lot of solo goals in that year which cause barcelona to win a trebles and titles</p><br><br>
     <h2>click below for watching messi stats of his career.</h2><br>
-<button><a href ="stats.html">click here for watching stats </a></button>
+<button><a href ="stats.html">click here for watching stats </a></button><br><br>
+    <script>
+  const quotes = [
+    "You have to fight to reach your dream. You have to sacrifice and work hard for it.",
+    "The best decisions aren’t made with your mind, but with your instinct.",
+    "You can overcome anything, if and only if you love something enough."
+  ];
+
+  let index = 0;
+  let charIndex = 0;
+  const typewriterDiv = document.getElementById("typewriter");
+  
+  function typeQuote() {
+    if (charIndex < quotes[index].length) {
+      typewriterDiv.innerHTML += quotes[index].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeQuote, 50);
+    } else {
+      setTimeout(() => {
+        typewriterDiv.innerHTML = "";
+        charIndex = 0;
+        index = (index + 1) % quotes.length;
+        typeQuote();
+      }, 2500);
+    }
+  }
+
+  typeQuote();
+</script>
+    <h2 id="typewriter" style="color: #10cfc9; font-family: cursive;"></h2>
 </body>
 </html>
